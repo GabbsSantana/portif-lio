@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<button class="secret-button" onclick="openPasswordModal()">
+        ✈️
+    </button>
+
+    <!-- Modal de Senha -->
+    <div class="password-modal" id="passwordModal">
+        <div class="password-box">
+            <h2>Acesso Especial</h2>
+            <p>Digite a senha secreta:</p>
+            <input type="password" class="password-input" id="passwordInput" placeholder="***">
+            <div id="message"></div>
+            <br>
+            <button class="password-btn" onclick="checkPassword()">Entrar</button>
+            <button class="password-btn" onclick="closePasswordModal()" style="background: #666;">Cancelar</button>
+        </div>
+    </div>
+
+    <!-- Animação da Embraer -->
+    <div class="animation-container" id="animationContainer">
+        <!-- Nuvens -->
+        <div class="clouds">
+            <div class="cloud cloud1"></div>
+            <div class="cloud cloud2"></div>
+            <div class="cloud cloud3"></div>
+        </div>
+
+        <!-- Avião -->
+        <div class="airplane" id="airplane">
+            <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Corpo do avião -->
+                <ellipse cx="100" cy="50" rx="80" ry="12" fill="#0066cc"/>
+                
+                <!-- Asas -->
+                <ellipse cx="80" cy="50" rx="60" ry="8" fill="#004499"/>
+                
+                <!-- Cauda -->
+                <polygon points="20,50 30,40 30,60" fill="#004499"/>
+                <polygon points="25,35 35,30 35,45" fill="#0066cc"/>
+                
+                <!-- Janelas -->
+                <circle cx="120" cy="45" r="3" fill="#87CEEB"/>
+                <circle cx="130" cy="45" r="3" fill="#87CEEB"/>
+                <circle cx="140" cy="45" r="3" fill="#87CEEB"/>
+                <circle cx="150" cy="45" r="3" fill="#87CEEB"/>
+                
+                <!-- Nariz -->
+                <ellipse cx="180" cy="50" rx="15" ry="8" fill="#002266"/>
+            </svg>
+        </div>
+
+        <!-- Logo Embraer -->
+        <div class="embraer-logo">
+            <h1>TIME EMBRAER</h1>
+            <p>Obrigado a todos!</p>
+        </div>
+
+        <!-- Botão Fechar -->
+        <button class="close-animation" onclick="closeAnimation()">Fechar</button>
+    </div>
+<body>
+    <header class="cabecalho">
+        <h1 class="titulo">GabrielSantana</h1>
+        <nav class="opicao">
+            <a href="#">Sobre mim</a>
+            <a href="#">Projetos</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+    <main>
+        <div class="stack" style="--stacks: 3;">
+            <span style="--index: 0;">
+                <h1 class="apresentacao__conteudo__titulo">TECNOLOGIA QUE <br><strong class="titulo-destaque">
+                        TRANSFORMA
+                    </strong></h1>
+            </span>
+            <span style="--index: 1;">
+                <h1 class="apresentacao__conteudo__titulo">TECNOLOGIA QUE <br><strong class="titulo-destaque">
+                        TRANSFORMA
+                    </strong></h1>
+            </span>
+            <span style="--index: 2;">
+                <h1 class="apresentacao__conteudo__titulo">TECNOLOGIA QUE <br><strong class="titulo-destaque">
+                        TRANSFORMA
+                    </strong></h1>
+            </span>
+        </div>
+        <!-- Dentro da div dos botões, adicione o botão animado -->
+        <div class="botao1a" style="margin-top: -20px;">
+            <a href="#" class="botao1">Conheça me</a>
+            <!-- Botão animado -->
+            <!-- Botão de download animado -->
+            <button class="botao-download" data-arquivo="Currículo Gabriel Santana (2).pdf">
+                <span class="texto">Download CV</span>
+                <span class="loading">0%</span>
+                <span class="icone seta">⬇</span>
+                <span class="icone check">✔</span>
+              </button>
+              
+
+        </div>
+
+        <!-- E no final do body, mantenha esse script -->
+        <script>
+            document.querySelectorAll('.botao-animado').forEach(botao => {
+                botao.addEventListener('click', () => {
+                    botao.classList.add('enviado');
+                    botao.querySelector('.texto').textContent = 'Enviado';
+
+                    setTimeout(() => {
+                        botao.classList.remove('enviado');
+                        botao.querySelector('.texto').textContent = 'Enviar';
+                    }, 2000);
+                });
+            });
+        </script>
+
+        <div class="codetheword-io" style="margin-left: 150px; margin-top: 100px;">
+            <a class="link" href="https://linkedin.com/in/gabriel-santana-dev" target="_blank" style="--color: #0072b1">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a class="link" href="https://github.com/GabbsSantana" target="_blank" style="--color: #e1306c">
+                <i class="fa-brands fa-github"></i>
+
+            </a>
+        </div>
+        <div class="container-imagens">
+            <img class="imagemHome" src="menino de azul.png">
+            <img class="imagemHomeback" src="atras menino.png">
+        </div>
+    </main>
+    <main class="pag2" style="margin-top: 100px;">
+       
+            
+            <div class="wrapper">
+                <div class="container">
+            
+                  <!-- Elemento com fundo cinza -->
+                    <!-- Elemento SEM fundo -->
+                  <div class="item no-bg w-50" style="width: 10%; margin-left: 0px;">
+                    <img src="image 4.png" width="10">
+                  </div>
+
+                  <div class="item with-bg w-25" style="margin-left: -440px; height: 237px ; margin-top: 17px;">
+                    <p class="tituloBloco">Gabriel Cruz de Santana</p>
+                    <p></p>
+                    <p class="textoBloco"> Telefone: (12) 98808-6851 <br>E-mail: gabrieltrabalho2003@gmail.com <br> São José dos Campos / SP</p>
+                  </div>
+
+                  <div style= "margin-top: -278px; margin-left: 875px; border-radius: 8px 8px 8px 8px;">
+                    <img src="fotoeu.png" width="185">
+                  </div>
+
+                  <div style= "margin-top: -292px; margin-left: 1085px; border-radius: 18px 18px 18px 18px;">
+                    <img src="fotojej.png" width="185">
+                  </div>
+
+                  <div class="item with-bg w-33" style="height: 140px; margin-top: -50px;">
+                    <p class="tituloBloco">Emprego Atual</p>
+                    <p></p>
+                    <p class="textoBloco"> Empresa: DataSide <br>Cargo:  Data Visualization Analyst Intern</p>
+                  </div>
+
+                  <div class="item with-bg w-33" style="height: 140px; margin-top: -50px;">
+                    <p class="tituloBloco">Estudos</p>
+                    <p></p>
+                    <p class="textoBloco"> Universidade: Unitau <br>Curso: Analise e Desenvolvimento de Sistemas</p>
+                    <p class="textoBloco"> Universidade: Unitau <br>Curso: Analise e Desenvolvimento de Sistemas</p>
+                  </div>
+
+                  <div  style= "margin-top: -142px; margin-left: 875px; border-radius: 8px 8px 8px 8px;">
+                    <img src="timeemb.png" width="395px">
+                  </div>
+
+                  <div class="item with-bg w-15" style="height: 200px; margin-top: -10px;" >
+                    <p class="tituloBloco">Hard Skills</p>
+                    <p></p>
+                    <p class="textoBloco"> HTML <br> CSS <br> Java Script <br>Python <br> GitHub <br> SQL <br> Power Bi</p>
+                  </div>
+
+                  <div class="item with-bg w-15" style="height: 200px; margin-top: -10px;" >
+                    <p class="tituloBloco">Paixões & passatempos</p>
+                    <p></p>
+                    <p class="textoBloco"> Jogos <br> Series <br> Cinema <br>Livros <br> Salem (meu gato😺) <br> Familia </p>
+                  </div>
+
+                  <div class="item with-bg w-35"style="height: 200px; margin-top: -10px" >
+                    <p class="tituloBloco">Sobre mim</p>
+                    <p></p>
+                    <p class="textoBloco"> Profissional em Dados e Visualização, com experiência na criação de dashboards no Power BI, 
+                        utilizando DAX, M e modelagem de dados. Atuo como Trainee em Data Visualization na DataSide,
+                         auxiliando na integração de dados e contato com clientes. Tenho conhecimento em Python, 
+                        JavaScript, Java e bancos de dados, além de experiência com Scrum e melhoria de processos.</p>
+                  </div>
+
+                  <div  style= "margin-top: -215px; margin-left: 879px; border-radius: 8px 8px 8px 8px;">
+                    <img src="dataside.png" width="390px">
+                  </div>
+                  <!-- 
+                  <div class="item no-bg w-25">
+                    <img src="foto1.jpg" alt="Imagem">
+                  </div>
+                  
+            
+                  <div class="item with-bg w-100">
+                    <p>Item que ocupa 100% com fundo</p>
+                  </div>
+            
+                  <div class="item with-bg w-75">
+                    <p>Outro com fundo (75%)</p>
+                  </div>
+            
+                  <div class="item no-bg w-25">
+                    <p>Outro sem fundo (25%)</p>
+                  </div> -->
+            
+                
+              </div>
+                </div>
+            <div>
+                <div style="margin-left: 100px;">
+                    <style>
+                        ul li a {
+                          color: gray; /* cor padrão */
+                          text-decoration: none;
+                          transition: color 0.3s ease;
+                        }
+                      
+                        ul li.active a {
+                          color: white; /* cor quando ativo */
+                        }
+                      </style>
+
+                      
+                      <style>
+                      .tab-buttons {
+                        display: flex;
+                        justify-content: center;
+                        margin-bottom: 40px;
+                        gap: 15px;
+                    }
+            
+                    .tab-button {
+                        padding: 12px 24px;
+                        border: none;
+                        background: #333;
+                        color: white;
+                        border-radius: 30px;
+                        font-size: 1rem;
+                        font-weight: 600;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                        position: relative;
+                        overflow: hidden;
+                        z-index: 1;
+                    }
+            
+                    .tab-button::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 0%;
+                        height: 100%;
+                        background: linear-gradient(90deg, #00ADB5, #2ecc71);
+                        transition: width 0.3s ease;
+                        z-index: -1;
+                    }
+            
+                    .tab-button:hover::before {
+                        width: 100%;
+                    }
+            
+                    .tab-button.active {
+                        background: #00ADB5;
+                        box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4);
+                        transform: translateY(-3px);
+                    }
+            
+                    /* Conteúdo das tabs */
+                    .tab-content {
+                        display: none;
+                        opacity: 0;
+                        transform: translateY(20px);
+                        transition: all 0.5s ease;
+                    }
+            
+                    .tab-content.active {
+                        display: block;
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+            
+                    /* Design para Trabalho */
+                    .work-section {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fill, minmax(900px, 1fr));
+                        gap: 30px;
+                    }
+            
+                    .work-card {
+                        
+                        background: white;
+                        border-radius: 20px;
+                        overflow: hidden;
+                        box-shadow: 
+  0 4px 6px rgba(0, 0, 0, 0.3), 
+  0 10px 20px rgba(0, 0, 0, 0.2);
+                        transition: all 0.3s ease;
+                        position: relative;
+                    }
+            
+                    .work-card:hover {
+                        transform: translateY(-10px);
+                        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+                    }
+            
+                    .work-card-header {
+                        height: 220px;
+                        position: relative;
+                        overflow: hidden;
+                    }
+            
+                    .company-image {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: all 0.5s ease;
+                    }
+            
+                    .work-card:hover .company-image {
+                        transform: scale(1.05);
+                    }
+            
+                    .work-card-overlay {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+                        padding: 20px;
+                        color: white;
+                    }
+            
+                    .work-card-overlay h3 {
+                        font-size: 1.5rem;
+                        margin-bottom: 5px;
+                        color: white;
+                    }
+            
+                    .work-card-overlay span {
+                        font-size: 0.9rem;
+                        opacity: 0.8;
+                    }
+            
+                    .work-card-body {
+                        padding: 25px;
+                    }
+            
+                    .work-card p {
+                        color: #666;
+                        line-height: 1.6;
+                        margin-bottom: 20px;
+                    }
+            
+                    .tech-tags {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 10px;
+                        margin: 15px 0;
+                    }
+            
+                    .tech-tag {
+                        background: #f0f0f0;
+                        color: #333;
+                        padding: 5px 12px;
+                        border-radius: 15px;
+                        font-size: 0.8rem;
+                        font-weight: 500;
+                        display: inline-flex;
+                        align-items: center;
+                        transition: all 0.3s ease;
+                    }
+            
+                    .tech-tag:hover {
+                        background: #e0e0e0;
+                        transform: translateY(-2px);
+                    }
+            
+                    .tech-tag i {
+                        margin-right: 5px;
+                        font-size: 1rem;
+                    }
+            
+                    .work-meta {
+                        display: flex;
+                        justify-content: space-between;
+                        color: #888;
+                        font-size: 0.9rem;
+                        border-top: 1px solid #eee;
+                        padding-top: 15px;
+                        margin-top: 15px;
+                    }
+            
+                    .company-button {
+                        display: inline-block;
+                        padding: 10px 20px;
+                        background: #00ADB5;
+                        color: white;
+                        text-decoration: none;
+                        border-radius: 30px;
+                        font-weight: 600;
+                        font-size: 0.9rem;
+                        transition: all 0.3s ease;
+                        text-align: center;
+                        margin-top: 15px;
+                    }
+            
+                    .company-button:hover {
+                        transform: translateY(-3px);
+                        box-shadow: 0 10px 20px rgba(46, 204, 113, 0.3);
+                    }
+            
+                    /* Design para Estudos */
+                    .studies-section {
+                        position: relative;
+                    }
+            
+                    .timeline {
+                        position: relative;
+                        max-width: 1200px;
+                        margin: 0 auto;
+                    }
+            
+                    .timeline::after {
+                        content: '';
+                        position: absolute;
+                        width: 6px;
+                        background-color: #3498db;
+                        top: 0;
+                        bottom: 0;
+                        left: 50%;
+                        margin-left: -3px;
+                        border-radius: 10px;
+                    }
+            
+                    .timeline-item {
+                        padding: 10px 40px;
+                        position: relative;
+                        width: 50%;
+                        margin-bottom: 60px;
+                    }
+            
+                    .timeline-item::after {
+                        content: '';
+                        position: absolute;
+                        width: 25px;
+                        height: 25px;
+                        background-color: white;
+                        border: 4px solid #2ecc71;
+                        top: 15px;
+                        border-radius: 50%;
+                        z-index: 1;
+                    }
+            
+                    .left {
+                        left: 0;
+                    }
+            
+                    .right {
+                        left: 50%;
+                    }
+            
+                    .left::after {
+                        right: -17px;
+                    }
+            
+                    .right::after {
+                        left: -17px;
+                    }
+            
+                    .timeline-content {
+                        padding: 25px;
+                        background-color: white;
+                        position: relative;
+                        border-radius: 15px;
+                        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+                    }
+            
+                    .timeline-content::after {
+                        content: '';
+                        position: absolute;
+                        border-width: 10px;
+                        border-style: solid;
+                    }
+            
+                    .left .timeline-content::after {
+                        top: 15px;
+                        right: -20px;
+                        border-color: transparent transparent transparent white;
+                    }
+            
+                    .right .timeline-content::after {
+                        top: 15px;
+                        left: -20px;
+                        border-color: transparent white transparent transparent;
+                    }
+            
+                    .timeline-date {
+                        display: inline-block;
+                        background:  #3498db;
+                        color: white;
+                        padding: 5px 15px;
+                        border-radius: 20px;
+                        font-size: 0.9rem;
+                        margin-bottom: 10px;
+                    }
+            
+                    .timeline-item h3 {
+                        font-size: 1.3rem;
+                        margin-bottom: 10px;
+                        color: #333;
+                    }
+            
+                    .timeline-item p {
+                        color: #666;
+                        line-height: 1.6;
+                    }
+            
+                    .study-tech-tags {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 8px;
+                        margin-top: 15px;
+                    }
+            
+                    .study-tech-tag {
+                        background: rgba(52, 152, 219, 0.1);
+                        color: #3498db;
+                        padding: 3px 10px;
+                        border-radius: 12px;
+                        font-size: 0.8rem;
+                    }
+            
+                    /* Design para Outros */
+                    .others-section {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 30px;
+                        justify-content: center;
+                    }
+            
+                    .hexagon-container {
+                        width: 300px;
+                        text-align: center;
+                        margin-bottom: 20px;
+                    }
+            
+                    .hexagon {
+                        position: relative;
+                        width: 200px;
+                        height: 115px;
+                        background: linear-gradient(45deg, #6c5ce7, #a29bfe);
+                        margin: 57.5px auto;
+                        border-radius: 10px;
+                        transition: all 0.3s ease;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: white;
+                        font-size: 40px;
+                    }
+            
+                    .hexagon:before,
+                    .hexagon:after {
+                        content: "";
+                        position: absolute;
+                        width: 0;
+                        left: 0;
+                        border-left: 100px solid transparent;
+                        border-right: 100px solid transparent;
+                    }
+            
+                    .hexagon:before {
+                        bottom: 100%;
+                        border-bottom: 57.5px solid #6c5ce7;
+                    }
+            
+                    .hexagon:after {
+                        top: 100%;
+                        border-top: 57.5px solid #a29bfe;
+                    }
+            
+                    .hexagon:hover {
+                        transform: scale(1.05) rotate(5deg);
+                        box-shadow: 0 15px 30px rgba(108, 92, 231, 0.3);
+                    }
+            
+                    .hexagon-details {
+                        margin-top: 80px;
+                        padding: 20px;
+                        background: white;
+                        border-radius: 15px;
+                        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+                    }
+            
+                    .hexagon-details h3 {
+                        font-size: 1.3rem;
+                        margin-bottom: 10px;
+                        color: #333;
+                    }
+            
+                    .hexagon-details p {
+                        color: #666;
+                        line-height: 1.6;
+                    }
+            
+                    /* Responsividade */
+                    @media screen and (max-width: 768px) {
+                        .work-section {
+                            grid-template-columns: 1fr;
+                        }
+            
+                        .timeline::after {
+                            left: 31px;
+                        }
+            
+                        .timeline-item {
+                            width: 100%;
+                            padding-left: 70px;
+                            padding-right: 25px;
+                        }
+            
+                        .timeline-item::after {
+                            left: 15px;
+                        }
+            
+                        .left::after, .right::after {
+                            left: 15px;
+                        }
+            
+                        .right {
+                            left: 0%;
+                        }
+            
+                        .left .timeline-content::after, 
+                        .right .timeline-content::after {
+                            left: -20px;
+                            border-color: transparent white transparent transparent;
+                        }
+                    }
+                </style>
+                <!-- Link para ícones Font Awesome -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+            </head>
+            
+            <body >
+                <div class="container1">
+                    
+                    <!-- Botões de navegação entre as abas -->
+                    <div class="tab-buttons" style="margin-left: -100px;">
+                        <button class="tab-button active" data-tab="work">Trabalho</button>
+                        <button class="tab-button" data-tab="studies">Estudos</button>
+                        <button class="tab-button" data-tab="others">Extras</button>
+                    </div>
+                    
+                    <!-- Conteúdo da aba Trabalho -->
+                    <div id="work" class="tab-content active">
+                        <div class="work-section" style="margin-right:100px;"    >
+                            <div class="work-card"  >
+                                <div class="work-card-header">
+                                    <img src="dataside_logo.png" alt="Empresa Exemplo" class="company-image">
+                                    <div class="work-card-overlay">
+                                        <h3>Data Visualization Analyst Intern</h3>
+                                        <span>DataSide</span>
+                                    </div>
+                                </div>
+                                <div class="work-card-body">
+                                    <p>Dedicado ao desenvolvimento dashboards no Power BI, aplicando DAX e M, além de atuar na modelagem e 
+                                        integração de dados com bancos de dados. Auxilio na organização da equipe, comunicação com clientes e 
+                                        execução de projetos estratégicos, utilizando DevOps e Excel com VBA para otimizar processos e resultados.</p>
+                                    
+                                    <div class="tech-tags">
+                                        <span class="tech-tag"><i class="fas fa-chart-bar"></i> Power BI</span>
+                                        <span class="tech-tag"><i class="fa-brands fa-python"></i> Python</span>
+                                        <span class="tech-tag"><i class="fa-solid fa-database"></i> Banco de Dados</span>
+                                        <span class="tech-tag"><i class="fas fa-cogs"></i> DevOps</span>
+                                        <span class="tech-tag"><i class="fas fa-table"></i> Excel</span>
+                                        <span class="tech-tag"><i class="fas fa-code"></i> DAX</span>
+                                        <span class="tech-tag"><i class="fas fa-code"></i> M</span>
+
+                                    </div>
+                                    
+                                    <div class="work-meta">
+                                        <span>2024 - Presente</span>
+                                        <span>Analista de Dados Junior</span>
+                                    </div>
+                                    
+                                    <a href="https://www.dataside.com.br/" target="_blank" class="company-button">Visitar Site da Empresa <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            
+                            <div class="work-card">
+                                <div class="work-card-header">
+                                    <img src="Embraer_logo.png" alt="Empresa Exemplo" class="company-image">
+                                    <div class="work-card-overlay">
+                                        <h3>Aprendiz de TI</h3>
+                                        <span>Embraer</span>
+                                    </div>
+                                </div>
+                                <div class="work-card-body">
+                                    <p> Desenvolvimento Front-end em ambiente colaborativo, utilizando HTML, CSS e JavaScript para
+                                        criar aplicações web interativas e responsivas. Experiência prática com a metodologia Scrum,
+                                        contribuindo em projetos de equipe.</p>
+                                    
+                                    <div class="tech-tags">
+                                        <span class="tech-tag"><i class="fab fa-figma"></i> Figma</span>
+                                        <span class="tech-tag"><i class="fab fa-sketch"></i> Java Script</span>
+                                        <span class="tech-tag"><i class="fa-brands fa-html5"></i> HTML</span>
+                                        <span class="tech-tag"><i class="fa-brands fahon"></i> GIT</span>
+                                        <span class="tech-tag"><i class="fa-brands fa-python"></i> Python</span>
+                                        <span class="tech-tag"><i class="fa-solid fa-database"></i> Banco de Dados</span>
+                                        <span class="tech-tag"><i></i> Metodologia Ágil</span>
+                                    </div>
+                                    
+                                    <div class="work-meta">
+                                        <span>2023 - 2024</span>
+                                        <span>Desenvolvedor Junior</span>
+                                    </div>
+                                    
+                                    <a href="https://embraer.com/br/pt" target="_blank" class="company-button">Visitar Site da Empresa <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- Conteúdo da aba Estudos -->
+                    <div id="studies" class="tab-content">
+                        <div class="studies-section">
+                            <div class="timeline">
+                                <div class="timeline-item left" style="margin-left: -80px;">
+                                    <div class="timeline-content">
+                                        <span class="timeline-date">2025 - 2027</span>
+                                        <h3>Big Data e Inteligência Analítica - Grupo Anchieta</h3>
+                                        <p>Curso voltado para o domínio de ferramentas e técnicas de análise de grandes volumes de dados, com foco em geração de insights
+                                             estratégicos. Estudo de fundamentos de Big Data, estatística aplicada, mineração de dados, visualização com ferramentas como
+                                              Power BI e linguagens como Python e SQL. A formação desenvolve competências para tomada de decisão orientada por dados.</p>
+                                        <div class="study-tech-tags">
+                                            <span class="study-tech-tag">Python</span>
+                                            <span class="study-tech-tag">TensorFlow</span>
+                                            <span class="study-tech-tag">PyTorch</span>
+                                            <span class="study-tech-tag">Deep Learning</span>
+                                            <span class="study-tech-tag">Algoritmos</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item right">
+                                    <div class="timeline-content">
+                                        <span class="timeline-date">2023 - 2026</span>
+                                        <h3>Análise e Desenvolvimento de Sistemas - UNITAU</h3>
+                                        <p>Curso focado em desenvolvimento de software, análise de sistemas, bancos de dados, lógica de programação 
+                                            e metodologias ágeis. Ao longo da formação, desenvolvo habilidades práticas em linguagens como Java, 
+                                            JavaScript e Python, além de atuar com modelagem de dados, engenharia de software e infraestrutura.
+
+                                        </p>
+                                        <div class="study-tech-tags">
+                                            <span class="study-tech-tag">Java</span>
+                                            <span class="study-tech-tag">SQL</span>
+                                            <span class="study-tech-tag">UML</span>
+                                            <span class="study-tech-tag">Metodologias Ágeis</span>
+                                            <span class="study-tech-tag">Estrutura de Dados</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Conteúdo da aba Outros -->
+                    <div id="others" class="tab-content">
+                        <div class="others-section">
+                             <div id="container" style="background-color: #f0f0f0   ;">
+  <div class="container">
+        <div class="program-section">
+            <div class="header">
+                <h1 class="program-title">1000dev</h1>
+                <p class="program-subtitle">Programa de Desenvolvimento em Tecnologia</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="programa1000dev-mentor-section">
+                    <h3 class="programa1000dev-mentor-title">💬 Depoimento do Mentor</h3>
+                    <blockquote class="programa1000dev-mentor-quote">
+                        "Tive a oportunidade de atuar como mentor do Gabriel no programa 1000 DEVs. Durante esse período, ele demonstrou grande engajamento, 
+                        dedicação e interesse em seu desenvolvimento, buscando constantemente aprimorar tanto suas soft skills quanto suas hard skills.
+
+Gabriel sempre esteve aberto a feedbacks e, de forma proativa, implementou ações para melhorar seu desempenho profissional e evoluir suas habilidades técnicas.
+
+Tenho certeza de que Gabriel tem um futuro brilhante pela frente!
+                    </blockquote>
+                    <div class="programa1000dev-mentor-info">
+                        <div class="programa1000dev-mentor-avatar">JS</div>
+                        <div class="programa1000dev-mentor-details">
+                            <h4>André Oliveira </h4>
+                            <p>Gerente de Marketing | Johnson & Johnson</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-images">
+                    <div class="image-placeholder" onclick="openModal('fotojej.png')">
+                        <img src="fotojej.png">
+                    </div>
+                    <div class="image-placeholder" onclick="openModal('grupoJJ.jpg')">
+                        <img src="grupoJJ.jpg" style="width: 200px;">
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="partners-section">
+                <h2 class="partners-title">Parceiros do Programa</h2>
+                <div class="partners-grid">
+                    <div class="partner-logo jj">
+                        <div>JOHNSON &</div>
+                        <div>JOHNSON</div>
+                        <div style="font-size: 0.7rem; margin-top: 0.3rem;">Healthcare Innovation</div>
+                    </div>
+                    <div class="partner-logo einstein">
+                        <div>HOSPITAL</div>
+                        <div>ALBERT EINSTEIN</div>
+                        <div style="font-size: 0.7rem; margin-top: 0.3rem;">Excellence in Health</div>
+                    </div>
+                    <div class="partner-logo mesttra">
+                        <div>MESTTRA</div>
+                        <div style="font-size: 0.7rem; margin-top: 0.3rem;">Education & Technology</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="achievements">
+                <h3>🚀 Conquistas no Programa</h3>
+                <p>Desenvolvimento de habilidades técnicas avançadas e networking profissional no setor de tecnologia.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para exibir fotos grandes -->
+    <div id="photoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-image" id="modalImage" src="" alt="Foto do Programa">
+        </div>
+    </div>
+
+    <script>
+        function openModal(imageSrc) {
+            const modal = document.getElementById('photoModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = 'block';
+            modalImg.src = imageSrc;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('photoModal');
+            modal.style.display = 'none';
+        }
+
+        // Fechar modal clicando fora da imagem
+        window.onclick = function(event) {
+            const modal = document.getElementById('photoModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Fechar modal com tecla ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+                        </div>
+                    </div>
+                </div>
+            
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        // Funcionalidade das abas
+                        const tabButtons = document.querySelectorAll('.tab-button');
+                        const tabContents = document.querySelectorAll('.tab-content');
+                        
+                        tabButtons.forEach(button => {
+                            button.addEventListener('click', function() {
+                                // Remover classes ativas
+                                tabButtons.forEach(btn => btn.classList.remove('active'));
+                                tabContents.forEach(content => content.classList.remove('active'));
+                                
+                                // Adicionar classe ativa ao botão clicado
+                                this.classList.add('active');
+                                
+                                // Mostrar conteúdo correspondente
+                                const tabId = this.getAttribute('data-tab');
+                                document.getElementById(tabId).classList.add('active');
+                            });
+                        });
+                        
+                        // Efeito de animação ao aparecer
+                        function animateContent() {
+                            const activeContent = document.querySelector('.tab-content.active');
+                            if (activeContent) {
+                                const items = activeContent.querySelectorAll('.work-card, .timeline-item, .hexagon-container');
+                                items.forEach((item, index) => {
+                                    setTimeout(() => {
+                                        item.style.opacity = '0';
+                                        item.style.transform = 'translateY(20px)';
+                                        setTimeout(() => {
+                                            item.style.transition = 'all 0.5s ease';
+                                            item.style.opacity = '1';
+                                            item.style.transform = 'translateY(0)';
+                                        }, 50);
+                                    }, index * 150);
+                                });
+                            }
+                        }
+                        
+                        // Inicializar animação
+                        animateContent();
+                        
+                        // Adicionar animação ao trocar de aba
+                        tabButtons.forEach(button => {
+                            button.addEventListener('click', function() {
+                                setTimeout(animateContent, 100);
+                            });
+                        });
+                    });
+                </script>
+            </div>
+       </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-divider"></div>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Sobre Mim</h3>
+                <p>Desenvolvedor apaixonado por tecnologia e soluções inovadoras. Especializado em criar experiências digitais únicas e funcionais.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section quick-links">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Projetos</a></li>
+                    <li><a href="#">Habilidades</a></li>
+                    <li><a href="#">Experiência</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section contact-info">
+                <h3>Contato</h3>
+                <span>📍 São Paulo, Brasil</span>
+                <span>📧 seu.email@exemplo.com</span>
+                <span>📱 +55 (11) 98765-4321</span>
+                <span>🌐 www.seuportfolio.com.br</span>
+            </div>
+
+            <div class="footer-section">
+                <h3>Mensagem Rápida</h3>
+                <form class="contact-form">
+                    <input type="text" placeholder="Nome" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Sua mensagem" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; <span id="year">2025</span> <a href="#">Seu Nome</a>. Todos os direitos reservados.
+            <script>
+                document.getElementById('year').textContent = new Date().getFullYear();
+            </script>
+            <script>
+        function openPasswordModal() {
+            document.getElementById('passwordModal').style.display = 'flex';
+            document.getElementById('passwordInput').focus();
+        }
+
+        function closePasswordModal() {
+            document.getElementById('passwordModal').style.display = 'none';
+            document.getElementById('passwordInput').value = '';
+            document.getElementById('message').innerHTML = '';
+        }
+
+        function checkPassword() {
+            const password = document.getElementById('passwordInput').value;
+            const messageDiv = document.getElementById('message');
+            
+            if (password === '123') {
+                messageDiv.innerHTML = '<div class="success-message">Acesso liberado! Iniciando animação...</div>';
+                setTimeout(() => {
+                    closePasswordModal();
+                    startAnimation();
+                }, 1000);
+            } else {
+                messageDiv.innerHTML = '<div class="error-message">Senha incorreta. Tente novamente.</div>';
+                document.getElementById('passwordInput').value = '';
+                document.getElementById('passwordInput').focus();
+            }
+        }
+
+        function startAnimation() {
+            const container = document.getElementById('animationContainer');
+            container.style.display = 'block';
+            
+            // Reset da animação do avião
+            const airplane = document.getElementById('airplane');
+            airplane.style.animation = 'none';
+            airplane.offsetHeight; // Trigger reflow
+            airplane.style.animation = 'flyAcross 8s ease-in-out';
+        }
+
+        function closeAnimation() {
+            document.getElementById('animationContainer').style.display = 'none';
+        }
+
+        // Permitir Enter na senha
+        document.getElementById('passwordInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
+        });
+
+        // Fechar modal com ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                if (document.getElementById('passwordModal').style.display === 'flex') {
+                    closePasswordModal();
+                } else if (document.getElementById('animationContainer').style.display === 'block') {
+                    closeAnimation();
+                }
+            }
+        });
+    </script>
+        </div>
+    </footer>
+</body>
+
+</html>
+<script src="home.js"></script>
