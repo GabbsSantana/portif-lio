@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - Portfólio</title>
+        <link rel="stylesheet" type="text/css" href="proj.css">
+
+    <style>
+body {
+    background-color: #222831;
+    margin: 0;
+    padding: 0;
+    color: #EEEEEE;
+    font-family: 'Oswald', sans-serif;
+}
+
+.cabecalho {
+    border-bottom: 1px solid #EEEEEE;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo {
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0;
+}
+.opicao a {
+    margin-left: 20px;
+    color: #EEEEEE;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Poppins';
+}
+
+.opicao a:hover {
+    text-decoration: underline;
+}
+
+
+.fundo {
+                background-image: url('fundo.png');
+
+}
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ADB5, transparent);
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #00ADB5;
+            text-shadow: 0 0 30px rgba(0, 173, 181, 0.3);
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #00ADB5, #00d4dd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .development-notice {
+            background: linear-gradient(135deg, rgba(0, 173, 181, 0.1), rgba(0, 173, 181, 0.05));
+            border: 1px solid rgba(0, 173, 181, 0.3);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .development-notice::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 173, 181, 0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .development-notice h2 {
+            color: #00ADB5;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .development-notice p {
+            color: #b0b0b0;
+            font-size: 1.1rem;
+        }
+
+        .construction-icon {
+            font-size: 1.5rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        .filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(0, 173, 181, 0.3);
+            color: #e0e0e0;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .filter-btn:hover {
+            background: rgba(0, 173, 181, 0.2);
+            border-color: #00ADB5;
+            color: #00ADB5;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 173, 181, 0.2);
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, #00ADB5, #00d4dd);
+            border-color: #00ADB5;
+            color: #000;
+            box-shadow: 0 5px 20px rgba(0, 173, 181, 0.4);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            position: relative;
+            backdrop-filter: blur(10px);
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 173, 181, 0.2);
+            border-color: rgba(0, 173, 181, 0.5);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 160px;
+            flex-shrink: 0;
+            background: linear-gradient(135deg, rgba(0, 173, 181, 0.1), rgba(0, 173, 181, 0.3));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(0, 173, 181, 0.2), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-card:hover .project-image::before {
+            opacity: 1;
+        }
+
+        .placeholder-icon {
+            font-size: 4rem;
+            color: #00ADB5;
+            opacity: 0.7;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-info {
+            flex-grow: 1;
+        }
+
+        .project-title {
+            color: #00ADB5;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-description {
+            color: #b0b0b0;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: auto;
+        }
+
+        .tech-tag {
+            background: rgba(0, 173, 181, 0.2);
+            color: #00ADB5;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid rgba(0, 173, 181, 0.3);
+        }
+
+        .coming-soon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: #00ADB5;
+            padding: 1rem 2rem;
+            border-radius: 15px;
+            font-weight: 600;
+            border: 2px solid #00ADB5;
+            backdrop-filter: blur(10px);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 173, 181, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 173, 181, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 173, 181, 0); }
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: #777;
+        }
+
+        .empty-state-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .filters {
+                gap: 0.5rem;
+            }
+
+            .filter-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="cabecalho" style="font-family: 'Oswald', sans-serif;">
+        <h1 class="titulo">GabrielSantana</h1>
+        <nav class="opicao">
+            <a href="home.html">Sobre mim</a>
+            <a href="#">Projetos</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+    <div class="fundo">
+    <div class="container">
+        <div class="header">
+            <h1>Meus Projetos</h1>
+        </div>
+
+        <div class="development-notice">
+            <h2>
+                <span class="construction-icon">🚧</span>
+                Seção em Desenvolvimento
+                <span class="construction-icon">🚧</span>
+            </h2>
+            <p>Esta aba está sendo desenvolvida. Os projetos serão adicionados em breve!</p>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="html-css">HTML/CSS</button>
+            <button class="filter-btn" data-filter="javascript">JavaScript</button>
+            <button class="filter-btn" data-filter="python">Python</button>
+            <button class="filter-btn" data-filter="powerbi">Power BI</button>
+            <button class="filter-btn" data-filter="sqlserver">SQL Server</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+            <!-- Exemplo de cards de projeto (vazios para demonstração) -->
+            <div class="project-card" data-tech="javascript html-css">
+                <div class="project-image">
+                    <div class="placeholder-icon">🎮</div>
+                </div>
+                <div class="project-content">
+                    <div class="project-info">
+                        <h3 class="project-title">Jogo da Cobrinha</h3>
+                        <p class="project-description">Clássico jogo da cobrinha desenvolvido com HTML5 Canvas e JavaScript puro.</p>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="coming-soon">Em Breve</div>
+            </div>
+
+            <div class="project-card" data-tech="python">
+                <div class="project-image">
+                    <div class="placeholder-icon">📊</div>
+                </div>
+                <div class="project-content">
+                    <div class="project-info">
+                        <h3 class="project-title">Análise de Dados</h3>
+                        <p class="project-description">Sistema de análise de dados usando Python com pandas e matplotlib.</p>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                    </div>
+                </div>
+                <div class="coming-soon">Em Breve</div>
+            </div>
+
+            <div class="project-card" data-tech="powerbi sqlserver">
+                <div class="project-image">
+                    <div class="placeholder-icon">📈</div>
+                </div>
+                <div class="project-content">
+                    <div class="project-info">
+                        <h3 class="project-title">Dashboard Vendas</h3>
+                        <p class="project-description">Dashboard interativo de vendas com Power BI conectado ao SQL Server.</p>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Power BI</span>
+                        <span class="tech-tag">SQL Server</span>
+                    </div>
+                </div>
+                <div class="coming-soon">Em Breve</div>
+            </div>
+
+            <div class="project-card" data-tech="javascript html-css">
+                <div class="project-image">
+                    <div class="placeholder-icon">🎯</div>
+                </div>
+                <div class="project-content">
+                    <div class="project-info">
+                        <h3 class="project-title">Jogo de Memória</h3>
+                        <p class="project-description">Jogo interativo de memória com cartas e sistema de pontuação.</p>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="coming-soon">Em Breve</div>
+            </div>
+
+            <div class="project-card" data-tech="python sqlserver">
+                <div class="project-image">
+                    <div class="placeholder-icon">🔍</div>
+                </div>
+                <div class="project-content">
+                    <div class="project-info">
+                        <h3 class="project-title">Sistema de Consultas</h3>
+                        <p class="project-description">Aplicação Python para consultas avançadas em banco de dados SQL Server.</p>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">SQL Server</span>
+                    </div>
+                </div>
+                <div class="coming-soon">Em Breve</div>
+            </div>
+
+            <div class="project-card" data-tech="html-css javascript">
+                <div class="project-image">
+                    <div class="placeholder-icon">💼</div>
+                </div>
+                <div class="project-content">
+                    <div class="project-info">
+                        <h3 class="project-title">Site Responsivo</h3>
+                        <p class="project-description">Website responsivo com design moderno e animações CSS.</p>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="coming-soon">Em Breve</div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    if (filterValue === 'all') {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 100);
+                    } else {
+                        const cardTech = card.getAttribute('data-tech');
+                        if (cardTech && cardTech.includes(filterValue)) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 100);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    }
+                });
+            });
+        });
+
+        // Adicionar efeito de fade-in nos cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        projectCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
